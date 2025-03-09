@@ -340,12 +340,13 @@
 });
     </script>
   <script>
-        // Mobile Menu Toggle
+    // Mobile Menu Toggle
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
 
         menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("hidden"); // Toggles visibility
+            mobileMenu.classList.toggle("flex"); // Ensures it displays correctly
         });
     </script>
 
