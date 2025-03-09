@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutstyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .service-card:hover { transform: translateY(-5px); }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#FF6600'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-primary shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-white text-2xl font-['Bebas Neue']"><b>Upper Ground Logistics</b></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Home</a>
+                        <a href="#services" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Services</a>
+                        <a href="#fleet" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Fleet</a>
+                        <a href="#contact" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Contact</a>
+                        <a href="#contact" class="bg-secondary text-white px-6 py-2 rounded uppercase text-sm font-medium hover:bg-opacity-90 transition-colors duration-200">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<br>
+    <!-- Main Content -->
+    <main>
+        <!-- About Us Section -->
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">About Us</h1>
+                <p class="mt-4 text-lg text-gray-600">Delivering Excellence in Transportation and Logistics</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 sm:text-4xl">Our Mission</h2>
+                <p class="mt-4 text-gray-600"> To provide safe, reliable and efficient logistics solutions that keep businesses
+    moving forward. We are committed to excellence in transportation, ensuring timely deliveries and customer satisfaction
+     through innovation and professionalism.</p>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-800 text-center sm:text-4xl mb-8">Our Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="text-4xl text-secondary mb-4">🚛</i>
+                        <h3 class="text-xl font-bold text-gray-800">Reliability</h3>
+                        <p class="mt-2 text-gray-600">We ensure your goods reach their destination on time, every time.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="text-4xl text-secondary mb-4">🌱</i>
+                        <h3 class="text-xl font-bold text-gray-800">Efficiency</h3>
+                        <p class="mt-2 text-gray-600">We optimize operations to minimize waste and maximize productivity.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="text-4xl text-secondary mb-4">🤝</i>
+                        <h3 class="text-xl font-bold text-gray-800">Customer Focus</h3>
+                        <p class="mt-2 text-gray-600">Your satisfaction is our priority. We tailor our services to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-12 fade-in">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 sm:text-4xl">Meet Our Team</h2>
+                <p class="mt-4 text-gray-600">A group of dedicated professionals working together to deliver excellence.</p>
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="images/md.jpg" alt="Team Member" class="w-full h-56 object-cover">
+                        <div class="p-6 text-center">
+                            <br>
+                            <h3 class="text-lg font-bold text-gray-800">Michael Kunaka</h3>
+                            <p class="mt-2 text-gray-600">Managing Director</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                   <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="images/om.jpg" alt="Team Member" class="w-full h-64 object-cover">
+    <div class="p-6 text-center">
+        <h3 class="text-lg font-bold text-gray-800">Madondo</h3>
+        <p class="mt-2 text-gray-600">Head of Operations</p>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-12 bg-gray-100 fade-in">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 sm:text-4xl">Our Services</h2>
+                <p class="mt-4 text-gray-600">We offer a wide range of professional services tailored to meet your unique needs. Here's what we excel at:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="fas fa-shipping-fast text-secondary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Freight Transportation</h3>
+                        <p class="mt-2 text-gray-600">Efficient and reliable logistics solutions to move your goods swiftly across destinations.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="fas fa-light fa-file-signature text-secondary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Dedicated & Contract Trucking</h3>
+                        <p class="mt-2 text-gray-600">Customized transportation services tailored to your
+                        business’s specific needs.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <i class="fas fa-regular fa-earth-africa text-secondary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Cross Boarder Logistics</h3>
+                        <p class="mt-2 text-gray-600">Hassle-free international transportation with compliance and
+                    customs expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Our Fleet Section -->
+    <section class="py-16 bg-gray-100 fade-in" id="fleet">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl">Our Fleet</h2>
+                <p class="mt-4 text-lg text-gray-600"> We believe that our success is built on the quality, reliability, and
+    efficiency of our fleet. Each vehicle in our fleet is maintained to the highest standards, ensuring safe and timely deliveries. Our range of
+    trucks allows us to meet the unique needs of our clients, driving innovation and excellence in every shipment we handle</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Fleet Item 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="https://via.placeholder.com/300x200" alt="Truck" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Freightliner Columbia</h3>
+                        <p class="mt-2 text-gray-600">Perfect for long-haul and heavy cargo, our trucks are equipped and maintained to the highest standard.</p>
+                    </div>
+                </div>
+                <!-- Fleet Item 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+                    <img src="https://via.placeholder.com/300x200" alt="Van" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Freightliner Columbia</h3>
+                        <p class="mt-2 text-gray-600">Perfect for long-haul and heavy cargo, our trucks are equipped and maintained to the highest standard.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-me ">
+    <div class="container">
+        <div class="section-title">
+            <h1>Contact Us</h1>
+            <h2 class="wall text-apps">Get in Touch</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-details">
+                <h3>We'd love to hear from you!</h3>
+                <p>If you have any questions, feel free to reach out!</p>
+                <p>Email: <a href="mailto:info@uppergroundlogistics.com">info@uppergroundlogistics.com</a></p>
+                <p>Phone: (263) 777-111-111</p>
+
+                   <p>
+    <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <br>
+    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+    <br>
+    <a href="#" class="social-link"><i class="fab fa-tiktok"></i> TikTok</a>
+    </p>
+
+
+
+            </div>
+            <div class="contact-form">
+                <form action="mailto:tadiwabasil2@gmail.com" method="POST" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-['Pacifico'] mb-6 block">Upper Ground</span>
+                    <p class="text-gray-300 mt-4">Your trusted partner in logistics solutions</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-200">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition-colors duration-200">Services</a></li>
+                        <li><a href="#industries2" class="text-gray-300 hover:text-secondary transition-colors duration-200">Industries we serve</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-map-pin-line"></i>
+                            <span>4 Stour Road, Vainona, Borrowdale, Harare</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-phone-line"></i>
+                            <span>+263777111111</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-mail-line"></i>
+                            <span>info@uppergroundlogistics.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Upper Ground Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    entry.target.classList.remove("reset"); // Ensure animation runs again
+                } else {
+                    entry.target.classList.remove("visible");
+                    entry.target.classList.add("reset"); // Reset animation
+                }
+            });
+        },
+        { threshold: 0.3 } // Trigger when 30% of the element is visible
+    );
+
+    fadeElements.forEach(element => observer.observe(element));
+});
+    </script>
+
+</body>
+</html>

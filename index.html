@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper Ground Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .service-card:hover { transform: translateY(-5px); }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#FF6600'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white">
+    <nav class="fixed w-full bg-primary shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-white text-2xl font-['Bebas Neue'] "><b>Upper Ground Logistics</b></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Home</a>
+                        <a href="#services" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Services</a>
+                        <a href="about.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">About</a>
+                        <a href="#contact" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Contact</a>
+                        <a href="#contact"  class="bg-secondary text-white px-6 py-2 !rounded-button uppercase text-sm font-medium hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap cursor-pointer">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-16 bg-cover bg-center relative" style="background-image: url('images/backgg.jpeg')">
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="fade-in">
+                <h1 class="text-5xl font-bold text-white mb-6">Logistics Solutions<br>for Modern Business</h1>
+                <p class="text-xl text-white mb-8 max-w-2xl">Streamline your supply chain with our innovative logistics solutions. Fast, reliable, and efficient transport and delivery services.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact"  class="bg-secondary text-white px-8 py-3 !rounded-button uppercase font-medium hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap cursor-pointer">Request a Quote</a>
+                    <a href="about.html"  class="border-2 border-white text-white px-8 py-3 !rounded-button uppercase font-medium hover:bg-white hover:text-primary transition-colors duration-200 whitespace-nowrap cursor-pointer">About Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-20 bg-gray-50 fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="ri-truck-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Freight Transportation</h3>
+                    <p class="text-gray-600">Reliable and timely delivery of goods across local and long
+                        haul routes with a well-maintained.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="ri-truck-line  text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Dedicated & Contract Trucking</h3>
+                    <p class="text-gray-600"> Customized transportation services tailored to your
+                        business’s specific needs.</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="ri-truck-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Cross Boarder Logistics</h3>
+                    <p class="text-gray-600">Hassle-free international transportation with compliance and
+                    customs expertise.</p>
+                </div>
+                  <div class="service-card bg-white p-8 rounded shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="ri-truck-line text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Specialized Hauling</h3>
+                    <p class="text-gray-600"> Safe transport of over-sized, heavy, or sensitive cargo with
+                    specialized equipment and handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <section id="industries2" class="py-20 bg-gray-50 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12">Industries We Serve</h2>
+        <div class="carousel-container relative overflow-hidden">
+            <div class="carousel-track flex">
+                <!-- Original Cards -->
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="manu.jpeg" alt="Manufacturing" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Manufacturing</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="https://public.readdy.ai/ai/img_res/374db1ae7edb9a3753dff99b1594d480.jpg" alt="Retail" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Retail</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="agric.jpg" alt="Agriculture" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Agriculture</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="constr.jpg" alt="Construction" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Construction</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="food.jpeg" alt="Food & Beverages" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Food & Beverages</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate Cards for Seamless Looping -->
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="manu.jpeg" alt="Manufacturing" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Manufacturing</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="https://public.readdy.ai/ai/img_res/374db1ae7edb9a3753dff99b1594d480.jpg" alt="Retail" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Retail</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img src="agric.jpg" alt="Agriculture" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-xl font-bold text-white">Agriculture</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="choose" class="py-20 bg-white fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center mb-4">
+                        <i class="ri-time-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock customer service to assist you anytime, anywhere.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center mb-4">
+                        <i class="ri-global-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Regional Network</h3>
+                    <p class="text-gray-600">Extensive region wide network covering major trade routes and destinations.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center mb-4">
+                        <i class="ri-shield-check-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Secure Transportation</h3>
+                    <p class="text-gray-600">Advanced tracking and security measures for your valuable cargo.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 flex items-center justify-center mb-4">
+                        <i class="ri-money-dollar-circle-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Cost Effective</h3>
+                    <p class="text-gray-600">Competitive pricing with no compromise on service quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="location" class="py-20 bg-white fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Presence</h2>
+        <div class="relative h-[600px] rounded-lg overflow-hidden group">
+            <img src="harare.jpg" alt="Global Map" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary/50 transition-opacity duration-300 group-hover:bg-opacity-10"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <h3 class="text-4xl font-bold">Regional Reach, Local Impact</h3>
+                <p class="mt-4">We operate in over 5 countries in the region.</p>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center">
+                <h3 class="text-4xl font-bold text-primary">5+</h3>
+                <p class="text-gray-600">Countries</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl font-bold text-primary">50+</h3>
+                <p class="text-gray-600">Cities</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl font-bold text-primary">100+</h3>
+                <p class="text-gray-600">Customers Served</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                Explore Our Locations
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section id="testimonials" class="py-16 bg-gray-100 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">What Our Clients Say</h2>
+        <p class="mt-4 text-lg text-gray-600">We pride ourselves on delivering exceptional service. Here’s what our clients have to say.</p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                <img src="https://via.placeholder.com/80" alt="Client Photo" class="w-20 h-20 rounded-full mb-4">
+                <p class="text-gray-600 italic">"Upper Ground has been a lifesaver for our farm! Their drivers are true professionals,
+                    handling our produce with care and always delivering on time" </p>
+                <br>
+                <h4 class="mt-4 text-lg font-bold text-gray-800">Munashe Shumba</h4>
+                <p class="text-sm text-secondary">Farm Owner, Nyanga</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                <img src="https://via.placeholder.com/80" alt="Client Photo" class="w-20 h-20 rounded-full mb-4">
+                <p class="text-gray-600 italic">"We rely on Upper Ground Logistics to keep our supply chain moving smoothly.  Their efficiency
+                    and reliability are unmatched, ensuring our products reach our customers on schedule."</p>
+                <h4 class="mt-4 text-lg font-bold text-gray-800">Chipo Moyo</h4>
+                <p class="text-sm text-secondary">Logistics Manager, Harare</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                <img src="https://via.placeholder.com/80" alt="Client Photo" class="w-20 h-20 rounded-full mb-4">
+                <p class="text-gray-600 italic">"Upper Ground came to our rescue with an urgent delivery when we needed it most.
+                    Their quick response and excellent customer service saved the day!"</p>
+                <br>
+                <h4 class="mt-4 text-lg font-bold text-gray-800">Rob Gumbo</h4>
+                <p class="text-sm text-secondary">Retail Store Manager, Bulawayo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-me ">
+    <div class="container">
+        <div class="section-title">
+            <h1>Contact Us</h1>
+            <h2 class="wall text-apps">Get in Touch</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-details">
+                <h3>We'd love to hear from you!</h3>
+                <p>If you have any questions, feel free to reach out!</p>
+                <p>Email: <a href="mailto:info@uppergroundlogistics.com">info@uppergroundlogistics.com</a></p>
+                <p>Phone: (263) 777-111-111</p>
+
+                   <p>
+    <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <br>
+    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+    <br>
+    <a href="#" class="social-link"><i class="fab fa-tiktok"></i> TikTok</a>
+    </p>
+
+
+
+            </div>
+            <div class="contact-form">
+                <form action="mailto:tadiwabasil2@gmail.com" method="POST" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-['Pacifico'] mb-6 block">Upper Ground</span>
+                    <p class="text-gray-300 mt-4">Your trusted partner in logistics solutions</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors duration-200">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition-colors duration-200">Services</a></li>
+                        <li><a href="#industries2" class="text-gray-300 hover:text-secondary transition-colors duration-200">Industries we serve</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-map-pin-line"></i>
+                            <span>4 Stour Road, Vainona, Borrowdale, Harare</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-phone-line"></i>
+                            <span>+263777111111</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="ri-mail-line"></i>
+                            <span>info@uppergroundlogistics.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-white hover:bg-secondary transition-colors duration-200">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Upper Ground Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    entry.target.classList.remove("reset"); // Ensure animation runs again
+                } else {
+                    entry.target.classList.remove("visible");
+                    entry.target.classList.add("reset"); // Reset animation
+                }
+            });
+        },
+        { threshold: 0.3 } // Trigger when 30% of the element is visible
+    );
+
+    fadeElements.forEach(element => observer.observe(element));
+});
+    </script>
+
+
+</body>
+</html>

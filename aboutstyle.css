@@ -1,0 +1,366 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #003366;
+    padding: 0.5rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #FF6600;
+}
+nav button {
+    background-color: #FF6600;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+nav button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Section Headings */
+section h1, section h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+section h1 {
+    font-size: 2.5rem;
+}
+section h2 {
+    font-size: 2rem;
+}
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin: 0.5rem 0;
+}
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.card i {
+    color: #FF6600;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Team Section */
+.team-member {
+    text-align: center;
+}
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+.team-member h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.team-member p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Why Choose Us Icons */
+.icon {
+    font-size: 3rem;
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
+.icon:hover {
+    color: #e65c00;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-cols-2, .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    nav .hidden {
+        display: none;
+    }
+}
+
+
+
+  /* Initial fade-in state */
+  .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  /* Active state when in view */
+  .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Reset animation when section leaves the viewport */
+  .fade-in.reset {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: none; /* Prevents flickering when out of view */
+  }
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+/* Contact Section */
+.contact-me {
+    padding: 80px 0;
+    background-color: #f9fafb; /* Light background */
+    color: #333; /* Default text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* Dark blue for the title */
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #3498db; /* Light blue for the subtitle */
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.contact-details {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50; /* Dark blue for headings */
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Slightly darker text for readability */
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: #3498db; /* Light blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #2980b9; /* Darker blue on hover */
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #3498db; /* Light blue for social links */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 600px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50; /* Dark blue for labels */
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3498db; /* Light blue border on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Soft glow on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: #3498db; /* Light blue for the button */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.contact-form button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.contact-me {
+    background: linear-gradient(135deg, #f9fafb 0%, #e9ecef 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-details,
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .section-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ensure the card has a consistent width */
+.rounded-lg {
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Set a max-width for the card */
+    margin: 0 auto; /* Center the card */
+}
+
+/* Ensure the image fits the card width and height */
+.w-full {
+    width: 100%;
+}
+
+.h-64 {
+    height: 16rem; /* Adjust height as needed */
+}
+
+.object-cover {
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.rounded-lg:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

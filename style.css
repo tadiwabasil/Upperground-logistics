@@ -1,0 +1,377 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Header Animation */
+header {
+    position: relative;
+    overflow: hidden;
+}
+header .fade-in h1, header .fade-in p {
+    animation: slideIn 0.6s ease forwards;
+    transform: translateY(20px);
+    opacity: 0;
+}
+header .fade-in h1 {
+    animation-delay: 0.2s;
+}
+header .fade-in p {
+    animation-delay: 0.4s;
+}
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar Hover Effects */
+nav a {
+    position: relative;
+    display: inline-block;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #FF6600;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Buttons */
+button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Service Cards */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+.service-card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.service-card i {
+    transition: color 0.3s ease;
+}
+.service-card:hover i {
+    color: #FF6600;
+}
+
+/* Industry Cards */
+section .group img {
+    transition: transform 0.3s ease-in-out;
+}
+section .group:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Icons Hover */
+footer a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+footer a:hover {
+    background-color: #FF6600;
+    color: #fff;
+}
+
+/* Global Map Section */
+section .relative:hover img {
+    filter: grayscale(50%) brightness(0.9);
+}
+
+/* Keyframes for Subtle Animations */
+@keyframes subtlePop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+.service-card:hover {
+    animation: subtlePop 0.4s ease;
+}
+
+/* Interactive Effects for Quick Links */
+footer ul li a:hover {
+    transform: translateX(5px);
+    color: #FF6600;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Background Transitions for Night Mode */
+body.night-mode {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+body.night-mode nav, body.night-mode footer {
+    background-color: #121212;
+}
+body.night-mode nav a, body.night-mode footer a {
+    color: #ccc;
+}
+body.night-mode .service-card, body.night-mode section {
+    background-color: #2a2a2a;
+}
+body.night-mode .service-card:hover {
+    box-shadow: 0px 4px 15px rgba(255, 102, 0, 0.5);
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #contact .contact-content {
+        flex-direction: column;
+    }
+
+    #contact .contact-details,
+    #contact .contact-form {
+        max-width: 100%;
+    }
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content; /* Allow the track to expand beyond container width */
+    animation: slide 20s linear infinite; /* Adjust animation duration as needed */
+}
+
+.carousel-slide {
+    flex: 0 0 calc(100% / 3); /* Show 3 slides at a time */
+    box-sizing: border-box;
+    padding: 0 8px; /* Add spacing between slides */
+    max-width: calc(50% / 3); /* Ensure each slide takes up 1/3 of the container */
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move halfway for seamless looping */
+    }
+}
+
+
+  /* Initial fade-in state */
+  .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  /* Active state when in view */
+  .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Reset animation when section leaves the viewport */
+  .fade-in.reset {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: none; /* Prevents flickering when out of view */
+  }
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+/* Contact Section */
+.contact-me {
+    padding: 80px 0;
+    background-color: #f9fafb; /* Light background */
+    color: #333; /* Default text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* Dark blue for the title */
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #3498db; /* Light blue for the subtitle */
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.contact-details {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50; /* Dark blue for headings */
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Slightly darker text for readability */
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: #3498db; /* Light blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #2980b9; /* Darker blue on hover */
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #3498db; /* Light blue for social links */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 600px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50; /* Dark blue for labels */
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3498db; /* Light blue border on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Soft glow on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: #3498db; /* Light blue for the button */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.contact-form button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.contact-me {
+    background: linear-gradient(135deg, #f9fafb 0%, #e9ecef 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-details,
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .section-title h1 {
+        font-size: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+}
