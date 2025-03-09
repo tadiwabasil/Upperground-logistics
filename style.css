@@ -48,6 +48,53 @@ nav a:hover::after {
     width: 100%;
     left: 0;
 }
+/* Navbar Styles for Mobile */
+nav {
+    z-index: 50;
+    background-color: #007bff; /* Replace with your primary color */
+}
+
+/* Hamburger Menu */
+#menu {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+/* Hidden Menu for Mobile */
+#menu.hidden {
+    max-height: 0;
+    display: none;
+}
+
+/* Expanded Menu for Mobile */
+#menu.show {
+    max-height: 20rem; /* Adjust for content */
+    display: block;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #menu {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        background-color: #007bff; /* Same as navbar */
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    #menu a {
+        margin-bottom: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    #menu a:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
 
 /* Buttons */
 button {

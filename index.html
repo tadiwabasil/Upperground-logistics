@@ -44,24 +44,36 @@
     </script>
 </head>
 <body class="min-h-screen bg-white">
-    <nav class="fixed w-full bg-primary shadow-md z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0">
-                    <span class="text-white text-2xl font-['Bebas Neue'] "><b>Upper Ground Logistics</b></span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <a href="index.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Home</a>
-                        <a href="#services" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Services</a>
-                        <a href="about.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">About</a>
-                        <a href="#contact" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Contact</a>
-                        <a href="#contact"  class="bg-secondary text-white px-6 py-2 !rounded-button uppercase text-sm font-medium hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap cursor-pointer">Get a Quote</a>
-                    </div>
+   <nav class="fixed w-full bg-primary shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <span class="text-white text-2xl font-['Bebas Neue']"><b>Upper Ground Logistics</b></span>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div id="menu" class="hidden md:block">
+                <div class="ml-10 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="index.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Home</a>
+                    <a href="#services" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Services</a>
+                    <a href="about.html" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">About</a>
+                    <a href="#contact" class="text-white hover:text-secondary transition-colors duration-200 uppercase text-sm font-medium">Contact</a>
+                    <a href="#contact" class="bg-secondary text-white px-6 py-2 rounded-button uppercase text-sm font-medium hover:bg-opacity-90 transition-colors duration-200 whitespace-nowrap cursor-pointer">Get a Quote</a>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <header class="pt-16 bg-cover bg-center relative" style="background-image: url('images/backgg.jpeg')">
         <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
@@ -430,7 +442,17 @@
     fadeElements.forEach(element => observer.observe(element));
 });
     </script>
+   <script>
+       // Mobile Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    menu.classList.toggle('hidden');
+});
+
+   </script>
 
 </body>
 </html>
