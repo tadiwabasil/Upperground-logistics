@@ -33,9 +33,6 @@ header .fade-in p {
 
 
 
-
-
-
 /* Navbar styling */
 nav {
     background-color: var(--primary);
@@ -45,58 +42,27 @@ nav {
     z-index: 50;
 }
 
-/* Desktop Navigation */
-.nav-link {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: var(--white);
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Desktop Hover Effects */
-.nav-link:hover {
-    color: var(--secondary);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary);
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/* Call-to-Action Button (Desktop) */
-.cta-btn {
-    background-color: var(--secondary);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
-}
-
-.cta-btn:hover {
-    background-color: #ff4500;
-    transform: scale(1.05);
-}
-
 /* Mobile Menu */
-#mobile-menu {
-    display: none;
+.mobile-menu {
+    background-color: #003466;
+    display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    max-height: 0; /* Start collapsed */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Mobile Menu when open */
+.mobile-menu.open {
+    max-height: 300px; /* Adjust based on content height */
+    opacity: 1;
 }
 
 /* Mobile Links */
@@ -104,7 +70,7 @@ nav {
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--white);
-    font-weight: 500;
+    font-weight: 800;
     padding: 0.5rem;
     transition: background-color 0.3s ease-in-out;
 }
@@ -131,12 +97,8 @@ nav {
 
 /* Media Queries */
 @media (min-width: 768px) {
-    #mobile-menu {
+    .mobile-menu {
         display: none !important;
-    }
-
-    .md\\:hidden {
-        display: none;
     }
 }
 
